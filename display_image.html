@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokémon Image Display</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <img id="pokemonImage" src="" alt="Pokémon Image" />
+  <script>
+    // Get the 'image' URL parameter from the query string
+    const urlParams = new URLSearchParams(window.location.search);
+    const imageUrl = urlParams.get('image');
+    
+    // Set the image source if URL is present
+    if (imageUrl) {
+      document.getElementById('pokemonImage').src = imageUrl;
+    }
+  </script>
+</body>
+</html>
